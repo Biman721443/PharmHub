@@ -21,15 +21,7 @@ const Header = () => {
     navigate("/profile"); // Navigate to the profile page
   };
   // Fetch user authentication state
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      if (!user) {
-        clearCart(); // Clear the cart if the user is not logged in
-      }
-    });
-    return () => unsubscribe();
-  }, [clearCart]);
+ 
 
   // Handle logout
   const handleLogout = async () => {
@@ -37,7 +29,6 @@ const Header = () => {
       await signOut(auth);
       setUser(null);
       setDropdownOpen(false);
-      clearCart(); // Clear the cart on logout
       navigate("/");
     } catch (error) {
       console.error("Logout error:", error.message);
