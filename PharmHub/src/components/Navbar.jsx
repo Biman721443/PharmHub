@@ -13,7 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { cartItems, cartCount } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; // Prevent undefined error
+  const { cartItems, cartCount, clearCart } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; // Prevent undefined error
   
 
   const handleProfileClick = () => {
@@ -21,7 +21,15 @@ const Header = () => {
     navigate("/profile"); // Navigate to the profile page
   };
   // Fetch user authentication state
- 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+      if (!user) {
+        clearCart(); // Clear the cart if the user is not logged in
+      }
+    });
+    return () => unsubscribe();
+  }, [clearCart]);
 
   // Handle logout
   const handleLogout = async () => {
@@ -29,6 +37,7 @@ const Header = () => {
       await signOut(auth);
       setUser(null);
       setDropdownOpen(false);
+      clearCart(); // Clear the cart on logout
       navigate("/");
     } catch (error) {
       console.error("Logout error:", error.message);
@@ -107,6 +116,7 @@ const Header = () => {
             </Link>
           )}
           <button
+            onClick={handleCartClick}
             className="relative flex items-center space-x-1 text-gray-700"
           >
             <FaShoppingCart size={18} />
