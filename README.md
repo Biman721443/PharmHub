@@ -16,9 +16,9 @@ Explore skincare and homecare products
 
 Project Code: B43 WEB 116 Web Project 111
 
-Deployment Link: https://pharm-hub.vercel.app/
+# Deployment Link: https://pharm-hub.vercel.app/
 
-Tech Stack
+# Tech Stack
 
 Frontend: React.js
 
@@ -28,13 +28,13 @@ Styling: Tailwind CSS
 
 Hosting: Vercel
 
-API Endpoints
+# API Endpoints
 
-Medicines: View JSON
+Medicines: https://pharmhub-87fa3-default-rtdb.firebaseio.com/medicine.json
 
-Skincare: View JSON
+Skincare: https://pharmhub-87fa3-default-rtdb.firebaseio.com/skincare.json
 
-Homecare: View JSON
+Homecare: https://pharmhub-87fa3-default-rtdb.firebaseio.com/homecare.json
 
 Features
 
@@ -55,11 +55,11 @@ Clone the repository:
 git clone https://github.com/your-username/pharmhub.git
 
 Navigate to the project directory:
-
+https://pharmhub-87fa3-default-rtdb.firebaseio.com/skincare.json
 cd pharmhub
 
 Install dependencies:
-
 npm install
 
 Start the development server:
+npm run dev
