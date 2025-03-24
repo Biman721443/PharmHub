@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaStar, FaTruck, FaShoppingCart } from "react-icons/fa";
-import { useCart } from "../context/CartContext"; // Import CartContext
+import { useCart } from "../context/CartContext"; 
 
 const HealthCarePage = () => {
         const { addToCart } = useCart();

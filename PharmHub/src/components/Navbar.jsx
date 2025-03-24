@@ -13,19 +13,19 @@ const Header = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { cartItems, cartCount, clearCart } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; // Prevent undefined error
+  const { cartItems, cartCount, clearCart } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; 
   
 
   const handleProfileClick = () => {
-    setDropdownOpen(false); // Close the dropdown
-    navigate("/profile"); // Navigate to the profile page
+    setDropdownOpen(false); 
+    navigate("/profile"); 
   };
   // Fetch user authentication state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       if (!user) {
-        clearCart(); // Clear the cart if the user is not logged in
+        clearCart(); 
       }
     });
     return () => unsubscribe();
@@ -37,7 +37,7 @@ const Header = () => {
       await signOut(auth);
       setUser(null);
       setDropdownOpen(false);
-      clearCart(); // Clear the cart on logout
+      clearCart(); 
       navigate("/");
     } catch (error) {
       console.error("Logout error:", error.message);
@@ -59,9 +59,9 @@ const Header = () => {
   // Handle cart click
   const handleCartClick = () => {
     if (!user) {
-      navigate("/login"); // Redirect to login page if the user is not logged in
+      navigate("/login");
     } else {
-      navigate("/cart"); // Navigate to the cart page if the user is logged in
+      navigate("/cart"); 
     }
   };
 
@@ -184,7 +184,6 @@ const MainComponent = () => {
       <Header />
       <Navbar />
       <div className="mt-[120px]">
-        {/* This margin ensures content is pushed below the fixed navbar */}
       </div>
     </>
   );

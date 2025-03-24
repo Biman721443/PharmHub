@@ -2,8 +2,7 @@ import './App.css';
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext"; 
-import { AuthProvider } from "./context/AuthContext"; // ✅ Import CartProvider
-// ✅ Import CartProvider
+import { AuthProvider } from "./context/AuthContext"; 
 import MainComponent from './components/Navbar';
 import Home from './pages/Home';
 import LabTestsPage from "./pages/LabTestsPage";
@@ -30,9 +29,9 @@ function App() {
   return (
     <AuthProvider>
     <CartProvider>
-      <div className="flex flex-col min-h-screen"> {/* Ensures footer stays at bottom */}
+      <div className="flex flex-col min-h-screen"> 
         <MainComponent />
-        <div className="flex-grow"> {/* Allows main content to push footer down */}
+        <div className="flex-grow"> 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register/>} />

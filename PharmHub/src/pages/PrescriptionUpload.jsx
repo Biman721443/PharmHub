@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaCloudUploadAlt, FaTrash, FaSearch, FaCheckCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Tesseract from "tesseract.js"; // Import Tesseract.js for OCR
+import Tesseract from "tesseract.js"; 
 import React from "react";
 
 const PrescriptionUpload = () => {
@@ -10,10 +10,10 @@ const PrescriptionUpload = () => {
   const [error, setError] = useState("");
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [recognizedText, setRecognizedText] = useState(""); // Store extracted text
-  const [products, setProducts] = useState([]); // Store products from Firebase
+  const [recognizedText, setRecognizedText] = useState(""); 
+  const [products, setProducts] = useState([]); 
   const [user, setUser] = useState(null);
-  const [progress, setProgress] = useState(0); // Track progress of text extraction
+  const [progress, setProgress] = useState(0); 
   const navigate = useNavigate();
 
   useEffect(() => {

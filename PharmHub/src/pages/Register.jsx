@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import registerBanner from "../assets/register.jpg"; // Add a suitable register banner image
+import registerBanner from "../assets/register.jpg"; 
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/login"); // Redirect to Login after successful registration
+      navigate("/login"); 
     } catch (error) {
       alert(error.message);
     }

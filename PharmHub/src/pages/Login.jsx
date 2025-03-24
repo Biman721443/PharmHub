@@ -2,13 +2,13 @@ import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import loginBanner from "../assets/login.jpg"; // Add a suitable login banner image
+import loginBanner from "../assets/login.jpg"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // Error message state
-  const [emailExists, setEmailExists] = useState(false); // Track if email exists
+  const [error, setError] = useState(""); 
+  const [emailExists, setEmailExists] = useState(false); 
   const navigate = useNavigate();
   const auth = getAuth();
 

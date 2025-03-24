@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
             ? { ...item, quantity: Math.max(1, item.quantity + amount) }
             : item
         )
-        .filter((item) => item.quantity > 0) // Remove items with quantity <= 0
+        .filter((item) => item.quantity > 0) 
     );
   };
 
@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cartItems,
         cartCount,
-        calculateTotal, // Add calculateTotal to the context value
+        calculateTotal, 
         addToCart,
         removeFromCart,
         updateQuantity,

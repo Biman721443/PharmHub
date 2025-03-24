@@ -12,14 +12,12 @@ const CartPage = () => {
   const { user } = useAuth(); // Get the logged-in user from AuthContext
   const navigate = useNavigate();
 
-  // Redirect to login if user is not authenticated
   useEffect(() => {
     if (!user) {
       navigate("/login"); // Redirect to the login page
     }
   }, [user, navigate]);
 
-  // If user is not authenticated, show nothing (or a loading spinner)
   if (!user) {
     return null; // Or return a loading spinner
   }

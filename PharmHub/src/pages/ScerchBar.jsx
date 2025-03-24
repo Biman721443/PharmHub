@@ -8,7 +8,6 @@ const SearchBar = () => {
   const [allProducts, setAllProducts] = useState([]);
   const navigate = useNavigate();
 
-  // Fetch products from both APIs
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -38,7 +37,7 @@ const SearchBar = () => {
       );
       setSuggestions(filteredSuggestions);
     } else {
-      setSuggestions([]); // Clear suggestions if the search term is empty
+      setSuggestions([]); 
     }
   }, [searchTerm, allProducts]);
 

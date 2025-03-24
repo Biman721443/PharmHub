@@ -5,7 +5,7 @@ import { useCart } from "../context/CartContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AIRecommendations from "./AIRecommendations"; // Import the AI component
+import AIRecommendations from "./AIRecommendations"; 
 
 const MedicineProduct = () => {
   const { addToCart } = useCart();
