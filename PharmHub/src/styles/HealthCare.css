@@ -1,0 +1,120 @@
+.healthcare-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .view-all {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .carousel {
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+  .product-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .product-name {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product-info {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .discounted-price {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: red;
+  }
+  
+  .discount {
+    color: green;
+  }
+  
+  .add-button {
+    background: darkgreen;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
