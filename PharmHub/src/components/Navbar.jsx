@@ -70,7 +70,7 @@ const Header = () => {
       <div className="w-full max-w-7xl flex flex-wrap md:flex-nowrap items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <Link to="/home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="PharmHub Logo" className="h-14 w-auto cursor-pointer" />
             <h2 className="text-2xl md:text-3xl font-extrabold text-green-700 tracking-tight drop-shadow-md">
               Pharm<span className="text-green-500">Hub</span>

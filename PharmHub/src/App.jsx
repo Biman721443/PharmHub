@@ -34,7 +34,7 @@ function App() {
         <MainComponent />
         <div className="flex-grow"> {/* Allows main content to push footer down */}
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/cart" element={<CartPage/>} />
