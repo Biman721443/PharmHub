@@ -86,7 +86,6 @@ const CheckoutPage = () => {
     setStep(step + 1);
   };
 
-  // Handle previous step
   const handlePrevious = () => {
     setStep(step - 1);
   };
@@ -154,7 +153,6 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* Step 1: Shipping Information */}
       {step === 1 && (
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold mb-6">Shipping Information</h3>
@@ -185,7 +183,6 @@ const CheckoutPage = () => {
         </div>
       )}
 
-      {/* Step 2: Payment Information */}
       {step === 2 && (
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold mb-6">Payment Information</h3>
@@ -236,7 +233,6 @@ const CheckoutPage = () => {
         </div>
       )}
 
-      {/* Step 3: Order Review */}
       {step === 3 && (
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold mb-6">Order Review</h3>
@@ -281,7 +277,6 @@ const CheckoutPage = () => {
         </div>
       )}
 
-      {/* Step 4: Confirmation */}
       {step === 4 && (
         <div className="bg-white p-6 rounded-lg shadow-lg text-center">
           <FaCheckCircle className="text-green-600 text-6xl mx-auto mb-4" />
@@ -290,7 +285,6 @@ const CheckoutPage = () => {
         </div>
       )}
 
-      {/* Navigation Buttons */}
       <div className="flex justify-between mt-6">
         {step > 1 && step < 4 && (
           <button
@@ -308,7 +302,7 @@ const CheckoutPage = () => {
             Next
           </button>
         )}
-        {step === 3 && (
+        {step ===3&& (
           <button
             onClick={handleConfirmOrder}
             className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200"

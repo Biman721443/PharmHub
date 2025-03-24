@@ -25,7 +25,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex space-x-4">
@@ -36,7 +35,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Subscribe</h3>
           <p className="text-sm mb-2">Get the latest health tips and offers.</p>
@@ -52,8 +50,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Copyright */}
       <div className="text-center mt-6 text-sm text-gray-400 border-t border-gray-700 pt-4">
         © {new Date().getFullYear()} PharmEasy. All rights reserved.
       </div>

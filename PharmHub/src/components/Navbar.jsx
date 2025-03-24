@@ -13,7 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { cartItems, cartCount, clearCart } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; // Prevent undefined error
+  const { cartItems, cartCount } = useCart() || { cartItems: [], cartCount: 0, clearCart: () => {} }; // Prevent undefined error
   
 
   const handleProfileClick = () => {
@@ -107,7 +107,6 @@ const Header = () => {
             </Link>
           )}
           <button
-            onClick={handleCartClick}
             className="relative flex items-center space-x-1 text-gray-700"
           >
             <FaShoppingCart size={18} />
